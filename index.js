@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+app.use(express.static('build'))
 app.use(cors())
 
 app.use(bodyParser.json())
@@ -37,7 +38,7 @@ let persons = [
 ]
 
 app.get('/', (req, res) => {
-    res.send('<h1>Hello World!</h1>')
+    res.send('<h1>Please visit <a>https://agile-crag-45594.herokuapp.com/api/persons</a></h1>')
 })
 
 //return all resources
